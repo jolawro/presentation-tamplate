@@ -7,7 +7,7 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
 
-    <title>reveal.js</title>
+    <title>Bootcamp CSS</title>
 
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/reveal.css" />
@@ -48,7 +48,7 @@
           </div>
         </section>
         <section class="self-into">
-          <h2>CSS style, you can...</h2>
+          <h2>CSS, you can...</h2>
 
           <div class="biography">
             <div class="item">
@@ -99,14 +99,12 @@
           <ul>
             <li>Styling Data Table</li>
             <li>Styling Form</li>
-            <li>Topography</li>
+            <li>Typography</li>
             <li>Developer Tools</li>
             <li>CSS Background</li>
             <li>Background Gradient</li>
-            <li>Full Width Backgrounds</li>
             <li>Responsive Web Design</li>
             <li>Special effects</li>
-            <li>Cross browsers compatible</li>
             <li>Tips ;)</li>
           </ul>
         </section>
@@ -196,7 +194,7 @@
         </code></pre>
         </section>
         <section class="definition">
-          <h2 class="dark-pink-text">cd. CSS Selectors</h2>
+          <h2 class="dark-pink-text">CSS Selectors</h2>
           <p> Mix descendant and class selectors - depend from where some
             element exist in html structure we can styled it in deferent ways.</p>
             <pre><code class="hljs css" data-trim data-line-numbers="1-20">
@@ -304,7 +302,7 @@
         <section class="desc">
           <h2 class="dark-pink-text">Something is wrong?</h2>
           <p class="fragment light-pink-text center">
-            Why is box-b not the same size as box-b?
+            Why is box-b not the same size as box-a?
           </p>
           <div class="flex center">
             <img
@@ -398,53 +396,28 @@
 					float: left;
 				 }			 
 				</code></pre>
-            <pre>html
-				<code class="hljs html" data-trim data-line-numbers="1-10">
-				<div class="container clearfix">
-					<div class="main-area"></div>
-					<aside class="sidebar"></aside>
-				</div>
-			
-		</code></pre>
+            <div>
+              <pre>html
+                <code class="hljs html" data-trim data-line-numbers="1-10">
+                <div class="container clearfix">
+                  <div class="main-area"></div>
+                  <aside class="sidebar"></aside>
+                </div>
+            </code></pre>
+           <div class="fragment">
+            <pre>css: clearfix class
+              <code class="hljs css" data-trim data-line-numbers="1-10">
+              .clearfix::after {
+                content: "";
+                display: table;
+                clear: both;
+              }
+          </code></pre>
+           </div>
+            </div>
           </div>
         </section>
-        <section class="code">
-          <p>
-            Clearfix set below the two floated box is bad practice
-          </p>
-
-          <div class="flex">
-            <pre><code class="hljs css" data-trim data-line-numbers="1-16">
-				.fix {clear: both }
-			</code></pre>
-            <pre><code class="hljs html" data-trim data-line-numbers="1-10">
-				<div class="container">
-					<div class="main-area"></div>
-					<aside class="sidebar"></aside>
-					<div class="fix"></div>
-				</div>
-			
-		</code></pre>
-          </div>
-
-          <p>Reusable solution</p>
-          <div class="flex">
-            <pre><code  class="hljs css" data-trim data-line-numbers="1-16">
-				   .clearfix::after { 
-					   content: "";
-					   display: table;
-					   clear: both;
-					} 
-			   </code></pre>
-            <pre><code class="hljs html" data-trim data-line-numbers="1-10">
-				<div class="container clearfix">
-					<div class="main-area"></div>
-					<aside class="sidebar"></aside>
-				</div>
-		</code></pre>
-          </div>
-        </section>
-
+        
         <section class="definition">
           <h2 class="dark-pink-text center">Clearfix</h2>
           <p>
@@ -502,7 +475,7 @@
               </code></pre>
         </section>
         <section class="definition">
-          <p>2. Remove default style from ul and li</p>
+          <p>2. Remove default style from ul li and a</p>
           <pre><code class="hljs css" data-trim data-line-numbers="1-20">
               ul {
                   padding: 0;
@@ -637,10 +610,9 @@
           <ul>
             <li>Styling Table</li>
             <li>Styling Form</li>
-            <li>Set Topography</li>
+            <li>Set Typography</li>
             <li>Use Developer Tools</li>
             <li>Styled Background</li>
-            <li>Set Full Width Backgrounds</li>
             <li>Create Responsive Web Design</li>
           </ul>
         </section>
@@ -765,7 +737,7 @@
           <a href="https://codepen.io/jola95/pen/GRobjqb">Codepen with form</a>
         </section>
         <section class="definition">
-          <h2 class="dark-pink-text center">CSS Topography</h2>
+          <h2 class="dark-pink-text center">CSS Typography</h2>
           <pre><code class="hljs css" data-trim data-line-numbers="1-12">
             body {
               font-size: 5%; /* other units: %, px, rem, em, keywords (small, medium, big); set in baseline in body element - all elements have base font size set in one place */
@@ -775,7 +747,7 @@
           </code></pre>
         </section>
         <section class="definition">
-          <h3 class="light-pink-text">cd. Topography</h3>
+          <h3 class="light-pink-text">Typography</h3>
           <pre><code class="hljs css" data-trim data-line-numbers="1-16">
             h1, h2, h3, h4, h5, h6, p, span, a {
               font-size: 5rem;
@@ -818,7 +790,7 @@
           </ul>
         </section>
         <section class="definition">
-          <h3 class="light-pink-text">CD. Developer Tools</h3>
+          <h3 class="light-pink-text">Developer Tools</h3>
           <ul>
             <li>On left side is html structure.</li>
             <li>On right side are all rules of style attached to inspect element</li>
@@ -828,7 +800,7 @@
           </ul>
         </section>
         <section class="definition">
-          <h3 class="light-pink-text">CD. Developer Tools</h3>
+          <h3 class="light-pink-text">Developer Tools</h3>
           <ul>
             <li>Developer tool is useful because of:</li>
             <ul>
@@ -956,6 +928,7 @@
           <h3 class="light-pink-text center">They are only names of the classes selectors!</h3>
          <p class="center">Now we need to fill all of them with values.</p>
          <a href="https://codepen.io/jola95/pen/YzwodPO">Play with it in Codepen</a>
+         <a href="https://www.w3schools.com/css/tryit.asp?filename=tryresponsive_styles">w3schools Example</a>
         </section>
 
         <section class="definition">
@@ -980,6 +953,7 @@
             <li><a href="https://www.udemy.com/course/web-design-for-beginners-real-world-coding-in-html-css/">web design for beginners real world coding in html css course</a></li>
             <li><a href="https://www.udemy.com/course/advanced-css-and-sass/">advanced css and sass course</a></li>
             <li><a href="https://codingheroes.io/resources/">resources</a></li>
+            <li><a href="https://levelup.gitconnected.com/advance-your-css-with-sass-bem-7-1-architecture-13898751976">7-1 pattern &amp; BEM methodology: useful article for EXTRA assignment.</a></li>
           </ol>
         </section>
         <section class="question-anwser">
