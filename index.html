@@ -1,142 +1,1023 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>reveal.js</title>
 
-	<title>reveal.js</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/black.css" />
 
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/reveal.css">
-	<link rel="stylesheet" href="css/theme/black.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css" />
 
-	<!-- Theme used for syntax highlighting of code -->
-	<link rel="stylesheet" href="lib/css/monokai.css">
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.type = 'text/css'
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? 'css/print/pdf.css'
+        : 'css/print/paper.css'
+      document.getElementsByTagName('head')[0].appendChild(link)
+    </script>
+  </head>
 
-	<!-- Printing and PDF exports -->
-	<script>
-		var link = document.createElement('link');
-		link.rel = 'stylesheet';
-		link.type = 'text/css';
-		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
-		document.getElementsByTagName('head')[0].appendChild(link);
-	</script>
-</head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section class="intro">
+          <h1>
+            NO ONE
+            <br />
+            CAN STOP US!
+          </h1>
+          <img class="img-medium" src="img/logo_WIT_biel.png" />
+        </section>
+        <section class="desc">
+          <h2>Full-Stack Bootcamp</h2>
+          <p class="light-pink-text center">Introduction to CSS.</p>
+          <div class="flex center">
+            <small class="italic self-center">Power by</small>
+            <img class="img-medium" src="img/logo_WIT_biel.png" />
+          </div>
+        </section>
+        <section class="self-into">
+          <h2>CSS style, you can...</h2>
 
-<body>
-	<div class="reveal">
-		<div class="slides">
-			<section class="intro">
-				<h1>NO ONE <br>CAN STOP US!</h1>
-				<img class="img-medium" src="img/logo_WIT_biel.png">
-			</section>
-			<section class="desc">
-				<h2>Full-Stack Bootcamp</h2>
-				<p class="light-pink-text center">Wstęp do języka PHP.</p>
-				<div class="flex center">
-					<small class="italic self-center">Power by</small>
-					<img class="img-medium" src="img/logo_WIT_biel.png">
-				</div>
-			</section>
-			<section class="self-into">
-				<h2>Back-end developer</h2>
+          <div class="biography">
+            <div class="item">
+              <img class="item_img" src="img/person.png" />
+            </div>
+            <div class="item">
+              <blockquote>
+                <p class="item_text">Love it of Hate it.</p>
+              </blockquote>
+            </div>
+          </div>
+        </section>
+        <section class="definition">
+          <h2 class="dark-pink-text">History</h2>
+          
+          <div class="flex">
+            <p class="">
+              CSS was first proposed by Håkon Wium Lie on October 10, 1994. At the
+              time and co-worker Bert Bos. The CSS specifications are maintained by the World Wide Web Consortium (W3C) <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets">(Wikipedia, 2020).</a>
+            </p>
+            <img src="img/CSS3_logo_and_wordmark.svg.png" alt="css logo" width="750">
+            
+          </div>
+          <img src="img/w3c_evangelist.png" alt="w3c logo" width="350">  
+          
+        </section>
+        <section class="list">
+          <h3 class="light-pink-text">Agenda:CSS Essentials</h3>
+          <ul>
+            <li>CSS Selectors</li>
+            <li>The Cascade</li>
+            <li>Box Model</li>
+            <li>Creating a Page Layout</li>
+            <li>Live programing: STYLE A HOME PAGE</li>
+          </ul>
+        </section>
+        <section class="list">
+          <h3 class="light-pink-text">Agenda: Intermediate CSS</h3>
+          <ul>
+            <li>Styling navigation</li>
+            <li>Overlapping effect</li>
+            <li>Color units</li>
+            <li>Background transparency</li>
+          </ul>
+        </section>
+        <section class="list">
+          <h3 class="light-pink-text">Agenda: Common SCC cases</h3>
+          <ul>
+            <li>Styling Data Table</li>
+            <li>Styling Form</li>
+            <li>Topography</li>
+            <li>Developer Tools</li>
+            <li>CSS Background</li>
+            <li>Background Gradient</li>
+            <li>Full Width Backgrounds</li>
+            <li>Responsive Web Design</li>
+            <li>Special effects</li>
+            <li>Cross browsers compatible</li>
+            <li>Tips ;)</li>
+          </ul>
+        </section>
+        <section class="definition">
+          <h2 class="dark-pink-text">CSS</h2>
+          <p class="">Cascading Style Sheet (CSS)</p>
+          <img
+            class="fragment"
+            src="img/1356709190_animaciya-mnogostupenchatyy-ruchey.gif"
+            alt="waterfall"
+            width="340"
+          />
+        </section>
+        <section class="definition">
+          <h2 class="dark-pink-text">HTML and CSS purpose</h2>
+          <ul>
+            <li class="fragment">
+              HTML - define what is a structure and content
+            </li>
+            <li class="fragment">
+              CSS - define how something should look like
+              <a
+                href="https://medium.mybridge.co/26-impressive-web-projects-built-with-css-only-4a4c2f773a21"
+              >
+                inspiration
+              </a>
+            </li>
+          </ul>
+          <img
+            class="fragment"
+            src="img/1*b54cEEfWghxm9tJZ9Z5uIg.gif"
+            alt="inspiration"
+            width="680"
+          />
+        </section>
+        <section class="definition">
+          <h2 class="dark-pink-text">
+            How to add CSS style to a page?
+          </h2>
+          <ul>
+            <li>
+              Add
+              <span>link</span>
+              element to a header. In Header html keeps all information about
+              content of the page.
+              <pre><code class="hljs html" data-trim data-line-numbers="2-4">
+								<link rel="stylesheet" href="css/main-style.css">
+            </code></pre>
+                        </li>
+            <li class="fragment">
+              rel: relationship with stylesheet (type of file).
+            </li>
+            <li class="fragment">href: path to the file with css code.</li>
+          </ul>
+        </section>
+        <section class="definition">
+          <h2 class="dark-pink-text center">CSS rule syntax</h2>
+          
+      <img src="img/unnamed.png" alt="css syntax">
 
-				<div class="biography">
-					<div class="item">
-						<img class="item_img" src="img/person.png">
+           <p class="fragment">We can have as much declarations as we want</p>
+           
+        </section>
+        <section class="definition">
+          <h2 class="dark-pink-text">CSS Selectors</h2>
+          <pre><code class="hljs css" data-trim data-line-numbers="1-20">
+           h1, a, div {
+             /* Tags types selectors: it attached to all type
+             of element on the page. It is the most basic css selector */
+           }
+
+           div a {
+             /* Descendant selector: more appropriate selector. We can specify
+             elements, or its group by specified how they are nested - parent
+             and children relations. */
+           }
+
+          .className {
+            /* Class selector: more appropriate selector than defendant selector reuse same style in many places
+          }
+
+
+          #idName {
+            /* ID selector: most appropriate selector. Only inline style are more appropriate than id selectors.
+          }
+
+        </code></pre>
+        </section>
+        <section class="definition">
+          <h2 class="dark-pink-text">cd. CSS Selectors</h2>
+          <p> Mix descendant and class selectors - depend from where some
+            element exist in html structure we can styled it in deferent ways.</p>
+            <pre><code class="hljs css" data-trim data-line-numbers="1-20">
+              .className {color: orange}
+              footer {color: green}
+              footer .className {color: blue}
+            </code>
+        </section>
+        <section class="definition">
+          <h2 class="dark-pink-text">Specificity</h2>
+          <img src="img/spec-03b.svg" alt="specificity">
+          <a href="https://codepen.io/jola95/pen/jOWgOJN">Practice in Codepen</a>
+
+          
+        </section>
+        <section class="definition">
+          <h2 class="dark-pink-text">Summing up Cascade</h2>
+          <ul>
+            <li class="fragment">
+              Cascade: like waterfall. Adding new
+              stream in cascade rewrite default browser’s style.
+            </li>
+            <li class="fragment">
+              Inheritance: allow to set style from parent elements to children
+              element.
+            </li>
+            <li class="fragment">
+              Specificity [specyficzność]:We can count the specificity to find out what rules are assigned to an element and influence its appearance.
+            </li>
+          </ul>
+        </section>
+        <section class="desc">
+          <h2 class="dark-pink-text">We have finished css Essentials</h2>
+          <p class="light-pink-text center">
+            It will be repeated all the time.
+          </p>
+          <div class="flex center"></div>
+        </section>
+        <section class="desc">
+          <h2 class="dark-pink-text">And now practical stuff and...</h2>
+          <p class="fragment light-pink-text center">Real CSS</p>
+          <div class="flex center">
+            <img class="img-medium fragment" src="img/giphy.gif" width="680" />
+          </div>
+        </section>
+
+        <section class="definition">
+          <h2 class="dark-pink-text">Box Model</h2>
+          <p>
+            Every elements on the web page are a rectangle or a box. Styling
+            mean to decorate, and manipulate boxes in any way that we can
+            imagine
+          </p>
+          <img src="img/css-box-model-core.png" alt="box model">
+        </section>
+        <section class="definition">
+          <h3 class="light-pink-text center">padding, border and margin</h3>
+          <pre><code class="hljs css" data-trim data-line-numbers="1-20">
+							.box-a {
+								background-color: orange;
+                padding: 30px; /* create space to inside of that box */
+                /* Full padding definition:
+								padding-top: 30px;
+								padding-right: 30px;
+								padding-bottom: 30px;
+                padding-left: 30px;
+                */
+								border: 1px solid black; /*  add outline on the outer edge of the box */
+								margin: 20px /* create space around outside of the box */
+							 }					 
+      </code></pre>
+        </section>
+        <section class="code">
+          <h3 class="light-pink-text">
+            How to control total width and height?
+          </h3>
+          <pre><code class="hljs css" data-trim data-line-numbers="1-4">
+					.box-a {
+						width: 20px;
+						height: 20px;
+					 }					 
+        </code></pre>
+        <p class="fragment">Use width and height properties.</p>
+        </section>
+        <section class="code">
+          <h3 class="light-pink-text center">
+            Compare total widths and heights
+          </h3>
+         
+          <pre><code class="hljs css" data-trim data-line-numbers="1-20">
+				.box-a {
+					width: 20px;
+					height: 20px;
+				 }
+				.box-b {
+					width: 20px;
+					height: 20px;
+					padding: 20px;
+					border: 10px;
+				 }						 
+          </code></pre>
+          <a href="https://codepen.io/jola95/pen/KKVOwgz">Practice in Codepen</a>
+        </section>
+
+        <section class="desc">
+          <h2 class="dark-pink-text">Something is wrong?</h2>
+          <p class="fragment light-pink-text center">
+            Why is box-b not the same size as box-b?
+          </p>
+          <div class="flex center">
+            <img
+              class="img-medium fragment"
+              src="img/Dog-figures-out-how-to-carry-stick-across-bridge.gif"
+              width="680"
+            />
+          </div>
+        </section>
+        <section class="desc">
+          <h2 class="dark-pink-text">Solution</h2>
+          <p class="fragment light-pink-text center">
+            Use box-sizing properties in universal selector to control width and
+            height of box
+          </p>
+
+          <div class="fragment">
+            <p class="light-pink-text">Default</p>
+            <pre><code class="hljs css" data-trim data-line-numbers="1-10">
+					* {
+						box-sizing: content-box 
+					}						 
+						</code></pre>
+          </div>
+          <div class="fragment">
+            <p class="light-pink-text">Modern</p>
+            <pre><code class="hljs css" data-trim data-line-numbers="1-10">
+						* {
+							box-sizing: border-box 
+						}						 
+        </code></pre>
+            <p class="fragment">
+              Box-sizing doesn’t count a margin properties!
+            </p>
+          </div>
+        </section>
+
+        <section class="desc">
+          <h2 class="dark-pink-text">Creating a Page Layout</h2>
+          <p class="fragment light-pink-text center">
+            <span class="dark-pink-text">Float</span>
+            / Flex / Grid
+          </p>
+          <div class="flex center">
+            <ul>
+              <li class="fragment">
+                Now 'div' elements take all available place in theirs width.
+              </li>
+              <li class="fragment">Position them in columns with Float.</li>
+              <li class="fragment">What is Float?</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="desc">
+          <h2 class="dark-pink-text">Float: how to use it</h2>
+          <p class="fragment">
+            Float positions boxes side by side to create columns.
+          </p>
+          <p class="light-pink-text">
+            HTML structure: parent element with children
+          </p>
+          <pre><code class="hljs html" data-trim data-line-numbers="1-10">
+					<div class="container clearfix">
+						<div class="main-area"></div>
+						<aside class="sidebar"></aside>
 					</div>
-					<div class="item">
-						<blockquote>
-							<p class="item_text">Brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog.
-								Junk MTV quiz graced by fox whelps. Bawds jog,
-								flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymphs grab
-								quick-jived waltz. Brick quiz whangs jumpy veldt fox.
-								Bright vixens jump; dozy fowl quack. Quick wafting zephyrs vex bold Jim.
-							</p>
-						</blockquote>
-					</div>
-				</div>
-			</section>
-			<section class="definition">
-				<h2 class="dark-pink-text">Brown fox</h2>
-				<p class="">Jumps over a lazy dog. DJs flock by when MTV ax quiz prog.
-					Junk MTV quiz graced by fox whelps. Bawds jog,
-					flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymphs grab
-					quick-jived waltz. Brick quiz whangs jumpy veldt fox. Bright vixens jump; dozy fowl quack.
-				</p>
-			</section>
-			<section class="list">
-				<h3 class="light-pink-text">Brown fox</h3>
-				<ul>
-					<li class="fragment">Jumps over a lazy dog. DJs flock by when MTV ax quiz prog.</li>
-					<li class="fragment">Junk MTV quiz graced by fox whelps.</li>
-					<li class="fragment">Bawds jog, flick quartz, vex nymphs.</li>
-					<li class="fragment">Waltz, bad nymph, for quick jigs vex.</li>
-				</ul>
-			</section>
-			<section class="code">
-				<h3 class="light-pink-text">Brown fox</h3>
-				<pre><code class="hljs php" data-trim data-line-numbers="2-4">
-				<?php
-				use PHPUnit\Framework\TestCase;
+				
+			</code></pre>
+        </section>
 
-				class StackTest extends TestCase
-				{
-					public function testPushAndPop()
-					{
-						$stack = [];
-						$this->assertSame(0, count($stack));
-
-						array_push($stack, 'foo');
-						$this->assertSame('foo', $stack[count($stack)-1]);
-						$this->assertSame(1, count($stack));
-
-						$this->assertSame('foo', array_pop($stack));
-						$this->assertSame(0, count($stack));
-					}
-				} 
-				?>
+        <section class="desc">
+          <p class="light-pink-text center">
+            CSS rules float
+          </p>
+          <div class="flex">
+            <pre>css
+				<code class="hljs css" data-trim data-line-numbers="1-16">
+				.container {
+					max-width: 940px;
+					margin-left: auto;
+					margin-right: auto;
+					margin: 0 auto;
+				 }
+				 .main-area {
+					width: 60%;
+					float: left;
+				 }
+				 .sidebar {
+					width: 40%;
+					float: left;
+				 }			 
 				</code></pre>
-			</section>
-			<section class="more-ridings">
-				<h2 class="center">Więcej na teamt:</h2>
-				<ol>
-					<li><a href="#">Klasy PHP</a></li>
-					<li><a href="#">Dokumentacja PHP</a></li>
-				</ol>
-			</section>
-			<section class="question-anwser">
-				<h2 class="center">Questions <br>&<br> Answers</h2>
-			</section>
-			<section class="ending">
-				<h2 class="light-pink-text center">Dziękujemy!</h2>
-				<img class="img-medium" src="img/logo_WIT_biel.png">
-				<small class="center">
-					<a class="btn" href="https://womenintechnology.pl/">
-						Strona WIT
-					</a>
-				</small>
-			</section>
-		</div>
-	</div>
+            <pre>html
+				<code class="hljs html" data-trim data-line-numbers="1-10">
+				<div class="container clearfix">
+					<div class="main-area"></div>
+					<aside class="sidebar"></aside>
+				</div>
+			
+		</code></pre>
+          </div>
+        </section>
+        <section class="code">
+          <p>
+            Clearfix set below the two floated box is bad practice
+          </p>
 
-	<script src="js/reveal.js"></script>
+          <div class="flex">
+            <pre><code class="hljs css" data-trim data-line-numbers="1-16">
+				.fix {clear: both }
+			</code></pre>
+            <pre><code class="hljs html" data-trim data-line-numbers="1-10">
+				<div class="container">
+					<div class="main-area"></div>
+					<aside class="sidebar"></aside>
+					<div class="fix"></div>
+				</div>
+			
+		</code></pre>
+          </div>
 
-	<script>
-		// More info about config & dependencies:
-		// - https://github.com/hakimel/reveal.js#configuration
-		// - https://github.com/hakimel/reveal.js#dependencies
-		Reveal.initialize({
-			hash: true,
-			dependencies: [
-				{ src: 'plugin/markdown/marked.js' },
-				{ src: 'plugin/markdown/markdown.js' },
-				{ src: 'plugin/highlight/highlight.js' },
-				{ src: 'plugin/notes/notes.js', async: true }
-			]
-		});
-	</script>
-</body>
+          <p>Reusable solution</p>
+          <div class="flex">
+            <pre><code  class="hljs css" data-trim data-line-numbers="1-16">
+				   .clearfix::after { 
+					   content: "";
+					   display: table;
+					   clear: both;
+					} 
+			   </code></pre>
+            <pre><code class="hljs html" data-trim data-line-numbers="1-10">
+				<div class="container clearfix">
+					<div class="main-area"></div>
+					<aside class="sidebar"></aside>
+				</div>
+		</code></pre>
+          </div>
+        </section>
 
+        <section class="definition">
+          <h2 class="dark-pink-text center">Clearfix</h2>
+          <p>
+            Box need to be independent and clear float by it selfs and not relay
+            on some other clearfix below. Parent element doesn’t see floated
+            children. On the end of children should be cleared by property
+            clearfix {clear: both}. Better solution is to set clearfix as a
+            separated class
+          </p>
+        </section>
+        <section class="definition">
+          <h2 class="dark-pink-text center">To sum up</h2>
+          <ul>
+            <li>Types of selectors</li>
+            <li>Box Model</li>
+            <li>Control size of box</li>
+            <li>Properties box-sizing</li>
+            <li>Create page layout with float property</li>
+            <li>Clearfix</li>
+          </ul>
+        </section>
+
+        <section class="definition">
+          <h2 class="dark-pink-text center">
+            Coding time!
+          </h2>
+          <img
+            src="img/5e39e5df-3cad-49a0-ba1f-b78015b54bd8.png"
+            alt="home page"
+            width="700"
+          />
+        </section>
+
+        <section class="definition">
+          <h2 class="dark-pink-text center">Intermediate CSS</h2>
+          <ul>
+            <li>Style navigation</li>
+            <li>Overlapping effect</li>
+            <li>Color units</li>
+            <li>Background transparency</li>
+          </ul>
+        </section>
+
+        <section class="definition">
+          <h2 class="dark-pink-text center">Styling navigation</h2>
+          <h3 class="light-pink-text">Tasks to do:</h3>
+          <p>1. In HTML set navigation structure with unordered list</p>
+          <pre><code class="hljs html" data-trim data-line-numbers="1-20">
+                <ul class="site-nav clearfix">
+                  <li>Home</li>
+                  <li>Blog</li>
+                  <li>About us</li>
+                  <li>Contact</li>
+                </ul>
+              </code></pre>
+        </section>
+        <section class="definition">
+          <p>2. Remove default style from ul and li</p>
+          <pre><code class="hljs css" data-trim data-line-numbers="1-20">
+              ul {
+                  padding: 0;
+                  margin: 0;
+               }   
+              li {
+                list-style: none;
+                float: left;
+              }
+              a {
+                text-decoration: none;
+              }    
+              </code></pre>
+        </section>
+        <section class="definition">
+          <p>3. In CSS file set rest navigation (list) css styles</p>
+          <pre><code class="hljs css" data-trim data-line-numbers="1-20">
+            .site-nav {
+               margin-top: 20px;
+            }
+            
+            .site-nav a { 
+              display: block;
+               color: green;
+               text-decoration: none;
+               padding: 5px;
+               border: 3px solid black;
+            }
+
+            .site-nav a:hover {
+               background-color: blue;
+            }             
+              </code></pre>
+        </section>
+        <section class="definition">
+          <h2 class="dark-pink-text center">
+            Overlapping effects with positioning properties
+          </h2>
+          <p>
+            Positioning your elements (boxes), so they can lay on each other. We
+            will talk about position property with relative and absolute value.
+          </p>
+        </section>
+        <section class="definition">
+          <h3 class="light-pink-text">Positioning</h3>
+          <ul>
+            <li class="fragment">
+              position absolute: position element without conjunction with the
+              rest elements, only with the parents with position relative. If
+              there is no one, the absolute position is conjunction with view
+              screen.
+            </li>
+            <li class="fragment">
+              If few elements overlap on each other, then we can decide which one should be on top by using z-index property with any values: z-index: 1; or z-index: -1;
+            </li>
+          </ul>
+        </section>
+        <section class="definition">
+          <h2 class="dark-pink-text center">Color units</h2>
+          <ul>
+            <li>Hexadecimal RGB</li>
+            <li>RGB</li>
+            <li>RGBA</li>
+            <li class="fragment">May be is more?</li>
+          </ul>
+        </section>
+        <section class="definition">
+          <h3 class="light-pink-text center">Hexadecimal</h3>
+          <p>
+            Hexadecimal RGB value: Six value from 0 - 9 and a - f. Each pair
+            represent a variation of colors: red; green; blue with 256
+            combination (16 * 16 = 256);
+          </p>
+          <p>Example HEX</p>
+          <div style="background-color: #ff9999; text-align: center;">
+            <span>#ff9999</span>
+          </div>
+        </section>
+        <section class="definition">
+          <h3 class="light-pink-text center">RGB &amp; RGBA</h3>
+          <p>
+            RGB &amp; RGBA: red-green-blue /-alpha: value for each color in
+            notation of 255. “A” value is for transparency from 0 to 1.
+          </p>
+          <p>Example RGB</p>
+          <div
+            style="background-color: rgb(255, 153, 153); text-align: center;"
+          >
+            <span>rgb(255, 153, 153)</span>
+          </div>
+          <p>Example RGBA</p>
+          <div
+            style="
+              background-color: rgb(255, 153, 153, 0.6);
+              text-align: center;
+            "
+          >
+            <span>rgba(255, 153, 153, .5)</span>
+          </div>
+        </section>
+
+        <section class="definition">
+          <h2 class="light-pink-text center">Background transparency</h2>
+          <ul>
+            <li class="fragment">
+              What is it?
+              <div
+                class="fragment"
+                style="
+                  background-color: rgba(255, 99, 71, 0.5);
+                  text-align: center;
+                  padding: 10% 0;
+                "
+              >
+                <span>
+                  div { background-color: rgba(255, 99, 71, 0.5); }
+                </span>
+              </div>
+            </li>
+
+            <li class="fragment">
+              How to set background transparency?
+              <p class="fragment light-pink-text">
+                Use rgba and set alpha value in background-color property.
+              </p>
+            </li>
+          </ul>
+        </section>
+
+        <section class="definition">
+          <h2 class="dark-pink-text center">Necessary Tasks</h2>
+          <ul>
+            <li>Styling Table</li>
+            <li>Styling Form</li>
+            <li>Set Topography</li>
+            <li>Use Developer Tools</li>
+            <li>Styled Background</li>
+            <li>Set Full Width Backgrounds</li>
+            <li>Create Responsive Web Design</li>
+          </ul>
+        </section>
+
+        <section class="definition">
+          <h2 class="dark-pink-text center">Styling Table</h2>
+          <pre><code class="hljs html" data-trim data-line-numbers="1-12">
+            <table class="tab-1">
+              <thead>
+                <tr>
+                  <th class="header-1">Name</th>
+            
+                  <th class="header-2">Date</th>
+                  <th class="header-3">Age</th>
+               </tr>
+             </thead>
+             <tbody>
+               <tr>
+                 <td>Ania</td>
+                 <td>01.02.2020</td>
+                 <td>10</td>
+               </tr>
+               <tr>
+                 <td>Hania</td>
+                 <td>01.03.2020</td>
+                 <td>5</td>
+               </tr>
+               <tr>
+                 <td>Basia</td>
+                 <td>01.12.2020</td>
+                 <td>9</td>
+               </tr>
+             </tbody>
+               
+            </table>
+          </code></pre>
+          <a href="https://codepen.io/jola95/pen/LYGKRyg?editors=1100">
+            Codepen for Table demo
+          </a>
+        </section>
+        <section class="definition">
+          <h2 class="light-pink-text center">Styling Table - Tasks</h2>
+          <p>Rewrite default table style by select table elements:</p>
+          <ul>
+            <li>Cells should stay next to each other</li>
+            <li>Set single border</li>
+            <li>Use full available horizontal space</li>
+          </ul>
+          <pre><code class="hljs css" data-trim data-line-numbers="1-20">
+            table {
+              border-spacing: 0; 
+              border-collapse: collapse;
+              width: 100%;
+           }
+          </code></pre>
+        </section>
+        <section class="definition">
+          <p>Styling Table content</p>
+          <ul>
+            <li>Title of the columns set to on left side</li>
+            <li>Set border</li>
+            <li>Set space inside cells</li>
+            <li>Set all text in same line</li>
+          </ul>
+          <pre><code class="hljs css" data-trim data-line-numbers="1-20">
+            table th {
+              text-align: left;
+           }           
+            table tr,
+            table td {
+              border: 1px solid black;
+              padding: 10px;
+              vertical-align: top;
+            }
+          </code></pre>
+        </section>
+        <section class="definition">
+          <p>Styling Table headers / row / columns</p>
+          <ul>
+            <li>Set blue color for odd row</li>
+            <li>Control width of columns</li>
+            <li>Set text in last two column center</li>
+          </ul>
+          <pre><code class="hljs css" data-trim data-line-numbers="1-20">
+            table  tbody tr:nth-child(odd) td {
+              background-color:blue;
+           }  
+            
+           .header-1 { width: 60px; }
+           .header-2 { width: 30px; }
+           .header-3 { width: 30px; }
+
+           table tr :nth-child(2),
+           table tr :nth-child(3) {
+             text-align: center;
+            }
+          </code></pre>
+        </section>
+        <section class="definition">
+          <h2 class="dark-pink-text center">Styling Form</h2>
+          <pre><code class="hljs html" data-trim data-line-numbers="1-12">
+            <form>
+              <label for="name" class="hide-label">Name</label>
+              <input id="name" placeholder="Your name" type="text" name="Name">
+              <label for="email" class="hide-label">Email</label>
+              <input id="email" placeholder="Your email" type="email" name="Email">
+              <label for="password" class="hide-label">Password</label>
+              <input id="password" placeholder="Your password" type="password" name="Password" class"hide-label">
+              <select>
+                  <option value="profile">My personal profile</option>
+                  <option value="office">My office</option>
+                  <option value="setting">Account setting</option>
+              </select>
+              <label>
+                  <input type="checkbox" checked="true" value="yes">
+                  <span class="checkout-text">Stay sign in</span>
+              </label>
+             
+              <input type="submit" value="Submit">
+          </form>
+          </code></pre>
+          <a href="https://codepen.io/jola95/pen/GRobjqb">Codepen with form</a>
+        </section>
+        <section class="definition">
+          <h2 class="dark-pink-text center">CSS Topography</h2>
+          <pre><code class="hljs css" data-trim data-line-numbers="1-12">
+            body {
+              font-size: 5%; /* other units: %, px, rem, em, keywords (small, medium, big); set in baseline in body element - all elements have base font size set in one place */
+            
+              font-family: Lato, Helvetica sans-serif; /* set in body element (root element on the page). Contain names of font installed in someone devices [Lato, Helvetica] + keywords “sans-serif”. First on the font name list is checked if it is available, if not, then browser will take second. If no one are available then browser take key word and font type is from browser system */
+            }
+          </code></pre>
+        </section>
+        <section class="definition">
+          <h3 class="light-pink-text">cd. Topography</h3>
+          <pre><code class="hljs css" data-trim data-line-numbers="1-16">
+            h1, h2, h3, h4, h5, h6, p, span, a {
+              font-size: 5rem;
+              font-weight: bold; /* normal etc. */
+              font-style: italic; /* normal etc. */
+              letter-spacing: 5px; /* set space between letters */
+              word-spacing: 5px; /* set space between word */
+              text-shadow: h-shadow v-shadow blur-radius color|none|initial|inherit; 
+              text-shadow: 2px 2px 2px #ff0000;
+              text-transform: uppercase; /* capitalize/ lowercase/ normal */  
+              text-decoration: underline; /* none; Be aware! underlining mean that something is a link. But we can remove underlining from 'a' element by setting rule: a { text-decoration: none} */
+              /* paragraphs */
+              text-align: right; /* left/center/justify: default value for paragraph is left side */
+              text-indent: 5px; /* space for margin. We can use it on any element, not just paragraph */
+              line-height: 1.5; /* space between lines’ of text. The unit is just number. It is good practice to set baseline for line-height in body elements. */
+            }
+          </code></pre>
+        </section>
+
+        <section class="definition">
+          <h2 class="dark-pink-text center">Developer Tools</h2>
+          <div class="item">
+            <blockquote>
+              <p class="item_text">
+                Developer tools (or "development tools" or short "DevTools") are programs that allow a developer to create, test and debug software. <a href="https://developer.mozilla.org/en-US/docs/Glossary/Developer_Tools">MDN web doc</a>
+              </p>
+            </blockquote>
+          </div>
+        </section>
+        <section class="definition">
+          <h3 class="light-pink-text">How to use Inspector Elements?</h3>
+          <img src="img/Inspector-Elements.png" alt="developer tools">
+        </section>
+        <section class="definition">
+          <h3 class="light-pink-text center">Get in to Developer Tools</h3>
+          <ul>
+            <li>Go to the browser.</li>
+            <li>Click on keyboard alt+ctrl+i or  on mack cmd+i.</li>
+            <li>View of the developer tools deepened from the browser. On Firefox it can looks different from Chrome.</li>
+          </ul>
+        </section>
+        <section class="definition">
+          <h3 class="light-pink-text">CD. Developer Tools</h3>
+          <ul>
+            <li>On left side is html structure.</li>
+            <li>On right side are all rules of style attached to inspect element</li>
+            <li>we can customizing all elements on our side in browser in real time.</li>
+            <li>Changes aren’t permanent.</li>
+            <li>Developer tool tells us where this rules are located in files.</li>
+          </ul>
+        </section>
+        <section class="definition">
+          <h3 class="light-pink-text">CD. Developer Tools</h3>
+          <ul>
+            <li>Developer tool is useful because of:</li>
+            <ul>
+              <li>tracking down where properties’ rules come from</li>
+              <li>experimenting or problem shooting</li>
+              <li>inspiration from other website.</li>
+            </ul>
+          </ul>
+          <p class="fragment">can I edit a html structure in developer tools?</p>
+        </section>
+
+        <section class="definition">
+          <h2 class="dark-pink-text center">CSS Background</h2>
+          <p>How to add a image on the background of our page?</p>
+          <pre><code class="hljs css" data-trim data-line-numbers="1-12">
+            .container {
+              background-image: url(/path to our picture);
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+
+              background: #c2bbb1 url(path) center center no-repeat cover;
+
+              background: url(path) left top repeat-x, #c2bbb1 url(path) 
+              left bottom repeat-x; 
+           }   
+          </code></pre>
+        </section>
+
+        <section class="definition">
+          <h2 class="dark-pink-text center">Responsive Web Design</h2>
+          <p>Elements on the page try to fit to the width of device's screen. It is much more usable (UX) for users. 
+          </p>
+          <p>Two ingredients:</p>
+          <ol>
+            <li>Meta tags in 'head' section in out html;</li>
+            <li>Media Queries (conditional CSS): it's a way to show our css how to proceed on a user screen of a certain siz;</li>
+          </ol>
+        </section>
+        <section class="definition">
+          <h3 class="light-pink-text center">Meta tags</h3>
+          <img src="img/Meta-tags.png" alt="meta tags" >
+          <a href="https://www.wikitechy.com/step-by-step-html-tutorials/meta-tag-in-html">more info</a>
+        </section>
+        <section>
+          <h3 class="light-pink-text center">Responsive meta tags</h3>
+          <pre><code class="hljs html" data-trim data-line-numbers="1-12">
+            <html>
+              <head>
+                <meta 
+                name="viewport" 
+                content="width=device-width, initial-scale=1"
+                >
+              </head>
+          </code></pre>
+          <ul>
+            <li><strong>name=”viewport”</strong>: It refer to web browser's window area, which is screen of user’s devises.</li>
+            <li><strong>content=”width=device-width, initial-scale=1”</strong>: We want the browser window to function at the actual screen width and to be truthful, not pretend to be larger.
+            </li>
+          </ul>
+        </section>
+        <section class="definition">
+          <h3 class="light-pink-text">These tags tell the device browser that it does not have to conform to the site's CSS rules. The site needs to be responsive and adaptable to the size of the device.</h3>
+        </section>
+        <section class="definition">
+          <h2 class="light-pink-text center">Media Queries</h2>
+          <pre><code class="hljs css" data-trim data-line-numbers="1-12">
+            @media screen and (max-width: 340px) {
+              .container {
+                  margin: 0 -20rem;
+                  padding: 2rem 20.5rem;
+              }
+           }
+          </code></pre>
+          <p>Media Queries are conditional css, what gives as opportunity to set style to specific viewport width.</p>
+        </section>
+        <section class="definition">
+          <h2 class="dark-pink-text center">Responsive Design Methodology</h2>
+          <ol>
+            <li>Mobile first: start from styling for mobile, and for bigger sizes use media query min-width</li>
+            <li>Desktop first: start from styling desktop, then smaller screen like mobile or tablet with max-width attributes in media query</li>
+          </ol>
+        </section>
+        <section class="definition">
+          <h2 class="light-pink-text center">Responsive Grids</h2>
+          <h3 class="center">What is grid? We use it to create a page layout so that it looks good and is balanced. The most popular grid has 12 columns</p>
+        </section>
+        <section class="definition">
+          <img src="img/12-column.jpg" alt="grid structure" width="750">
+          <p>pink color: column; white color: gutter (pl:rynna, rowek)</p>
+        </section>
+        <section class="definition">
+          <h2 class="light-pink-text center">How to apply 12 column grid for web devices?</h2>
+          <img src="img/grid-system-illustration.jpg" alt="grid illustration">
+        </section>
+        <section class="definition">
+          <h2 class="light-pink-text center">Grid div structure</h2>
+          <pre><code class="hljs html" data-trim data-line-numbers="1-12">
+   <div class="container">
+    <div class="row">
+        <div class="column">1</div>
+        <div class="column">1</div>
+        <div class="column">1</div>
+    </div>
+</div>
+          </code></pre>
+        </section>
+        <section class="definition">
+          <h3 class="light-pink-text center">Class name system for columns types</h3>
+          <ul>
+            <li>col: default</li>
+            <li>col-xs: extra small (mobile first pattern)</li>
+            <li>col-sm: small (desktop first pattern)</li>
+            <li>col-md: medium (laptops or medium monitors)</li>
+            <li>col-lg: large (desktop large monitor)</li>
+          </ul>
+        </section>
+        <section class="definition">
+          <p class="light-pink-text">For each columns types we can specify their width by adding to the base name some number.</p>
+          <img src="img/Rush-12-grid-thumb.png" alt="gride width defined" width="700">
+          <pre><code class="hljs html" data-trim data-line-numbers="1-12"><div class="col-6 col-xs-2"></div></code></pre>
+        </section>
+
+        <section class="definition">
+          <h3 class="light-pink-text center">They are only names of the classes selectors!</h3>
+         <p class="center">Now we need to fill all of them with values.</p>
+         <a href="https://codepen.io/jola95/pen/YzwodPO">Play with it in Codepen</a>
+        </section>
+
+        <section class="definition">
+          <h2 class="dark-pink-text center">CSS Special effects</h2>
+          <ul>
+            <li>Box shadows</li>
+            <li>Rounded corners</li>
+            <li>CSS Transform</li>
+            <li>CSS Transitions</li>
+            <li>CSS Animations</li>
+          </ul>
+        </section>
+        <section class="definition">
+          <h2 class="light-pink-text center">It is better to show than describe</h2>
+          <a href="https://codepen.io/jola95/pen/YzwmyJe">Go to Codepen</a>
+        </section>
+
+
+        <section class="more-ridings">
+          <h2 class="center">More about it</h2>
+          <ol>
+            <li><a href="https://www.udemy.com/course/web-design-for-beginners-real-world-coding-in-html-css/">web design for beginners real world coding in html css course</a></li>
+            <li><a href="https://www.udemy.com/course/advanced-css-and-sass/">advanced css and sass course</a></li>
+            <li><a href="https://codingheroes.io/resources/">resources</a></li>
+          </ol>
+        </section>
+        <section class="question-anwser">
+          <h2 class="center">
+            Questions
+            <br />
+            &amp;
+            <br />
+            Answers
+          </h2>
+        </section>
+        <section class="ending">
+          <h2 class="light-pink-text center">Thank you!</h2>
+          <img class="img-medium" src="img/logo_WIT_biel.png" />
+          <small class="center">
+            <a class="btn" href="https://womenintechnology.pl/">
+              WIT website
+            </a>
+          </small>
+        </section>
+      </div>
+    </div>
+
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        hash: true,
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/highlight/highlight.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+        ],
+      })
+    </script>
+  </body>
 </html>
